@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: theme(colors.accent.emerald);
+}
+
+.accent-emerald { --accent: theme(colors.accent.emerald); }
+.accent-teal { --accent: theme(colors.accent.teal); }
+.accent-indigo { --accent: theme(colors.accent.indigo); }
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-b from-slate-50 to-slate-200 text-slate-800 dark:from-slate-900 dark:to-black dark:text-slate-100 antialiased;
+}
+
+.card {
+  @apply rounded-2xl bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-neu dark:shadow-neuDark border border-white/40 dark:border-white/5;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium shadow-sm transition-colors border border-black/5 dark:border-white/10;
+}
+
+.btn-primary {
+  @apply text-white bg-[color:var(--accent)] hover:opacity-90;
+}
+
+.btn-secondary {
+  @apply bg-white/60 dark:bg-white/10 hover:bg-white/80 dark:hover:bg-white/15;
+}
+
+.input {
+  @apply w-full rounded-xl bg-white/70 dark:bg-white/10 border border-black/5 dark:border-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-[color:var(--accent)];
+}
+
+.slider {
+  accent-color: var(--accent);
+}
+
